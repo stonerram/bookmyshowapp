@@ -1,0 +1,199 @@
+.recommended-movies {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    position: relative;
+    top: 2rem;
+  }
+
+  .recommended-moviesp{
+     padding: 20px;
+     /* background-image: url("https://images.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg?auto=compress&cs=tinysrgb&w=600");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed; */
+     background-color: #222;
+     text-align: center;
+     color: white;
+    position: relative;
+    top: 2rem;
+
+  }
+
+  .badge{
+    position: relative;
+    top: -1rem;
+    background-color: red;
+  }
+  .premiere-info {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 1rem;
+    top: 0.1rem;
+  }
+  
+  .premiere-info h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: centuar;
+    position: relative;
+    top: 0.5rem;
+
+  }
+  
+  .premiere-info p {
+    font-size: 14px;
+    color: #aaa;
+    text-transform: uppercase;
+    font-family: centur;
+
+
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    left: -29.2rem;
+    font-family: centuar;
+    transition: box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    animation: rotateCard 5s infinite alternate;
+  }
+  
+  .movie-slide {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 images per row */
+    gap: 2.5rem; /* Equal spacing between images */
+    padding: 0 2.5rem; 
+    position: relative;
+    top: 1rem;
+  }
+  
+ 
+  
+  .movie-item img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+   
+  }
+
+  .movie-item img:hover{
+    transform: scale(1.05);
+    z-index: 2;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    animation: rotateCard 5s infinite alternate;
+  }
+  
+  .movie-name {
+    font-size: 18px;
+    color: #444;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .movie-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  .see-all-button {
+    position: absolute;
+    top: 2rem;
+    right: 3.7rem; /* Align with right padding */
+    padding: 5px 10px;
+    /* background-color: #007bff; */
+    color: blue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: centuar;
+  }
+  
+  .see-all-button:hover {
+    background-color: #0056b3;
+    color: #f9f9f9;
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .prev-arrow {
+    left: 2.5rem;
+    display: none; /* Initially hidden */
+  }
+  
+  .next-arrow {
+    right: 2.5rem;
+  }
+  
+  .carousel-item:hover .prev-arrow,
+  .carousel-item:hover .next-arrow {
+    display: block; 
+  }
+  
+  .all-movies-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.5rem;
+    padding: 0 2.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .movie-slide {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+  
+    .movie-item {
+      aspect-ratio: 2 / 3;
+    }
+  
+    .all-movies-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+  
+    .carousel-arrow {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+    }
+  }
+  
+  @keyframes rotateCard {
+    0% {
+      transform: rotateY(-4deg);
+    }
+    50% {
+      transform: rotateY(20deg) rotateX(5deg);
+    }
+    100% {
+      transform: rotateY(-20deg) rotateX(-5deg);
+    }
+  }
