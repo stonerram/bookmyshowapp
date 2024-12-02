@@ -1,0 +1,101 @@
+.premieres-container {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+}
+
+.premieres-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2.5rem;
+}
+
+.premieres-header h1 {
+  font-size: 24px;
+}
+
+.see-all-button {
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.premieres-description {
+  margin: 10px 2.5rem;
+  color: #aaa;
+}
+
+.premieres-grid {
+  display: flex;
+  align-items: center;
+  margin: 0 2.5rem;
+  position: relative;
+}
+
+.premiere-card {
+  width: 200px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.premiere-card img {
+  width: 100%;
+  height: auto;
+}
+
+.premiere-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.premiere-info h2 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.premiere-info p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #f00;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.prev-arrow,
+.next-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev-arrow {
+  left: 0;
+}
+
+.next-arrow {
+  right: 0;
+}

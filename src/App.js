@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import MenuBar from "./components/MenuBar";
+import AdCarousel from "./components/Carousel";
+import RecommendedMovies from "./components/RecommendedMovies";
+import Footer from "./components/Footer";
+import LiveEvents from "./components/LiveEvents";
+import Premieres from "./components/Primieres";
+import MusicStudios from "./components/MusicStudios";
+import OutDoorEvents from "./components/OutDoorEvents";
+import LaughterTherapy from "./components/LaughterTherapy";
+import PapularEvents from "./components/PapularEvents";
+import LatestPlay from "./components/LatestPlayes";
+import LatestPlayes from "./components/LatestPlayes";
+import Sports from "./components/Sports";
 
-function App() {
+
+const App = () => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header toggleSidebar={toggleSidebar} />
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <MenuBar />
+      <AdCarousel />
+      <RecommendedMovies />
+      <LiveEvents/>
+      <br/><br/><br/>
+     <AdCarousel />
+     <br/><br/>
+     <Premieres/>
+     <MusicStudios/>
+     <OutDoorEvents/>
+     <br/><br/><br/><br/>     
+
+     <AdCarousel />
+     
+     <LaughterTherapy/>
+     <PapularEvents/>
+     <LatestPlayes/>
+     <br/><br/><br/><br/>     
+
+     <AdCarousel />
+
+     <Sports/>
+     
+
+
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
